@@ -28,3 +28,11 @@ export function searchTransationByDateRange(initialDate, finalDate){
 
     cy.get("input[type=submit]").contains("findByDateRange").click();
 }
+
+export function requestLoan(loan, entry){
+    cy.get("a").contains("requestloan").click();
+    cy.get('input[id="amount"]').type(loan);
+    cy.get('input[id="downPayment"]').type(entry);
+
+    cy.get("input[type=submit]").contains("Apply Now").click();
+}
