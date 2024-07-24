@@ -1,10 +1,18 @@
 const adress = "https://parabank.parasoft.com/parabank/index.htm";
 
-export function Login(username, password) {
+export function Login(username, password, shouldFail = false) {
   cy.visit(adress);
   cy.get("input[name=username]").type(username);
   cy.get("input[name=password]").type(password);
   cy.get("input[type=submit]").click();
+
+  if (shouldFail) {
+    cy.contains("The username and password could not be verified.")
+      .should("be.visible")
+      .then(() => {
+        alert("Teste bem sucedido.");
+      });
+  }
 }
 
 export function Register(username, password) {

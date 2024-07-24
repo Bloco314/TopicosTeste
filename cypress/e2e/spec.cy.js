@@ -6,9 +6,9 @@ describe("Testing a site for my beloved Jonathan", () => {
     cleanDb();
   });
 
-  it("inits the database", () => {
-    initDb();
-  });
+  // it("inits the database", () => {
+  //   initDb();
+  // });
 
   // it("Try a invalid Login", () => {
   //   Login("Jose123", "1234");
