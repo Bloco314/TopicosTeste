@@ -1,4 +1,4 @@
-import { Login } from "./userSimulation";
+import { Login } from "./_userSimulation";
 
 describe("Testa uma tentativa de Login invalido", () => {
   it("Try login", () => {
