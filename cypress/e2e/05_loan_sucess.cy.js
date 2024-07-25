@@ -6,6 +6,6 @@ describe("",()=>{
     it("",()=>{
         cleanDb();
         Register("Hans","123");
-        requestLoan();
+        requestLoan(100,100);
     });
 });

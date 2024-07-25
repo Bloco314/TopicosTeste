@@ -34,7 +34,7 @@ export function requestLoan(loan, entry) {
   cy.get('input[id="amount"]').type(loan);
   cy.get('input[id="downPayment"]').type(entry);
 
-  cy.get("input[type=submit]").contains("Apply Now").click();
+  cy.get("input[type=button]").click();
 }
 
 export function payBill(account, amount, filler = "a", failmode = false) {
