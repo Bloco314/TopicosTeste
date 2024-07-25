@@ -8,25 +8,24 @@ export function fundsTransference(amount) {
 }
 
 export function searchTransationByDate(date) {
-  cy.get("a").contains("findtrans").click();
+  cy.get('a[href="findtrans.htm"]').should('be.visible').click();
   cy.get('input[id="transactionDate"]').type(date);
 
-  cy.get('input[id="findByDate"]').click();
+  cy.get('button[id="findByDate"]').click();
 }
 
 export function searchTransationByAmount(amount) {
-  cy.get("a").contains("findtrans").click();
+  cy.get('a[href="findtrans.htm"]').should('be.visible').click();
   cy.get('input[id="amount"]').type(amount);
-
-  cy.get('input[id="findByAmount"]').click();
+  cy.get('button[id="findByAmount"]').click();
 }
 
 export function searchTransationByDateRange(initialDate, finalDate) {
-  cy.get("a").contains("findtrans").click();
+  cy.get('a[href="findtrans.htm"]').should('be.visible').click();
   cy.get('input[id="fromDate"]').type(initialDate);
   cy.get('input[id="toDate"]').type(finalDate);
 
-  cy.get('input[id="findByDateRange"]').click();
+  cy.get('button[id="findByDateRange"]').click();
 }
 
 export function requestLoan(loan, entry) {
