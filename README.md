@@ -12,3 +12,4 @@ controle da automação e funções proprias de um banco. </br>Foi escolhido o c
 <h3>Uso do CyPress</h3>
 
 Documentação do CyPress: <link>https://docs.cypress.io/guides/overview/why-cypress</link>
+</br>Para rodar os teste é necessario rodar no terminal da pasta o comando npx cypress open, então escolher a opção de E2E Testing, o navegador desejado para rodar os testes e selecionar o arquivo spec.cy.js, que será encontrado na pasta e2e do projeto.
