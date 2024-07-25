@@ -10,22 +10,22 @@ describe("Testing a site for my beloved Jonathan", () => {
     initDb();
   });
 
-  // it("Try a invalid Login", () => {
-  //   Login("Jose123", "1234");
-  //   cy.wait(3000);
-  // });
+   it("Try a invalid Login", () => {
+     Login("Jose123", "1234");
+     cy.wait(3000);
+   });
 
-  // it("Register a new user", () => {
-  //   Register("Jose123", 123);
-  //   cy.wait(3000);
-  // });
+   it("Register a new user", () => {
+     Register("Jose123", 123);
+     cy.wait(3000);
+   });
 
-  // it("Try a valid Login", () => {
-  //   Login("Jose123", "123");
-  //   cy.wait(3000);
-  // });
+   it("Try a valid Login", () => {
+     Login("Jose123", "123");
+     cy.wait(3000);
+   });
 
-  // it("Logout", () => {
-  //   Logout();
-  // });
+   it("Logout", () => {
+     Logout();
+   });
 });
