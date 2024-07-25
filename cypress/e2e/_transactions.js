@@ -30,14 +30,14 @@ export function searchTransationByDateRange(initialDate, finalDate) {
 }
 
 export function requestLoan(loan, entry) {
-  cy.get("a").contains("requestloan").click();
+  cy.get("a").contains("Request Loan").click();
   cy.get('input[id="amount"]').type(loan);
   cy.get('input[id="downPayment"]').type(entry);
 
   cy.get("input[type=submit]").contains("Apply Now").click();
 }
 
-export function payBill(account, amount, filler = "a") {
+export function payBill(account, amount, filler = "a", failmode = false) {
   cy.visit(adress);
   cy.get("a").contains("Bill Pay").click();
 
@@ -55,5 +55,10 @@ export function payBill(account, amount, filler = "a") {
   cy.wait(250);
 
   cy.get("input[type=button]").click();
-  cy.contains("was successful").should("be.visible");
+  
+  if (failmode) {
+    cy.contains("valid number").should("be.visible");
+  } else {
+    cy.contains("was successful").should("be.visible");
+  }
 }
